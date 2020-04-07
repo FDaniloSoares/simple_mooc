@@ -21,7 +21,7 @@ class Course(models.Model):
         'Data de inicio', null=True, blank=True 
     )
     image = models.ImageField(
-        upload_to='courses/images', verbose_name='Imagem',
+        upload_to='https://secundawsbucketdanilo.s3.us-east-2.amazonaws.com/', verbose_name='Imagem',
         null=True, blank=True
     )
     
