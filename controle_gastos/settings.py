@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #creted APP for myself
     'controle_gastos.polls',
+    'controle_gastos.accounts',
     'controle_gastos.courses',
 ]
 
@@ -126,6 +127,11 @@ EMAIL_HOST_PASSWORD = 'senha'
 EMAIL_PORT = 587
 
 CONTACT_EMAIL = 'fdanilosoares@gmail.com'
+
+#Configuraçoes de Auth
+LOGIN_URL = '/conta/entrar'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_URL = 'accounts:logout'
 
 #uso em testes pelo shell (nao funcionou de fato)
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
