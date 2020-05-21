@@ -1,2 +1,2 @@
-simple_mooc/polls/static/* linguist-vendored
-simple_mooc/staticfiles/* linguist-vendored
+simple_mooc/polls/static/* linguist-documentation
+staticfiles/* linguist-documentation
