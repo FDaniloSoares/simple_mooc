@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 # Create your tests here.
-from controle_gastos.polls import mail
+from simple_mooc.polls import mail
 from django.test.client import Client
 from django.urls import reverse
 

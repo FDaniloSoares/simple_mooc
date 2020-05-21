@@ -1,10 +1,10 @@
 from django.test import TestCase
 
 # Create your tests here.
-from controle_gastos.polls import mail
+from simple_mooc.polls import mail
 from django.test.client import Client
 from django.urls import reverse
-from controle_gastos.courses.models import Course
+from simple_mooc.courses.models import Course
 
 # tem que ter test_algunacoisa
 class ContactCourseTestCase(TestCase):

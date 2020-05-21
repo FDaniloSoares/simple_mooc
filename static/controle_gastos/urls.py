@@ -1,4 +1,4 @@
-"""controle_gastos URL Configuration
+"""simple_mooc URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -21,8 +21,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include(('controle_gastos.polls.urls', 'polls'), namespace='polls' )),
-    path('cursos/', include(('controle_gastos.courses.urls', 'courses'), namespace='courses')),
+    path('', include(('simple_mooc.polls.urls', 'polls'), namespace='polls' )),
+    path('cursos/', include(('simple_mooc.courses.urls', 'courses'), namespace='courses')),
     path('admin/', admin.site.urls),
 ]
 

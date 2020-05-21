@@ -1,1 +1,1 @@
-web: gunicorn controle_gastos.wsgi
+web: gunicorn simple_mooc.wsgi
