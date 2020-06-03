@@ -25,7 +25,7 @@ urlpatterns = [
     path('conta/', include(('simple_mooc.accounts.urls', 'accounts'), namespace='accounts' )),
     path('cursos/', include(('simple_mooc.courses.urls', 'courses'), namespace='courses')),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
