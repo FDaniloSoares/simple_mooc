@@ -8,12 +8,13 @@ asgiref==3.2.10           # via -r requirements.in, django
 click==7.1.2              # via -r requirements.in, flask
 dj-database-url==0.5.0    # via -r requirements.in
 dj-static==0.0.6          # via -r requirements.in
-django==3.0.7             # via -r requirements.in
+django==3.0.7             # via -r requirements.in, model-mommy
 flask==1.1.2              # via -r requirements.in
 gunicorn==20.0.4          # via -r requirements.in
 itsdangerous==1.1.0       # via -r requirements.in, flask
 jinja2==2.11.2            # via -r requirements.in, flask
 markupsafe==1.1.1         # via -r requirements.in, jinja2
+model-mommy==2.0.0        # via -r requirements.in
 pillow==7.2.0             # via -r requirements.in
 psycopg2-binary==2.8.5    # via -r requirements.in
 psycopg2==2.8.5           # via -r requirements.in

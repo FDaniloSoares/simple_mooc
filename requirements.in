@@ -16,3 +16,4 @@ pytz
 sqlparse
 static3
 Werkzeug
+model-mommy
