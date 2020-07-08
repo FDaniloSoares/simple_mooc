@@ -31,7 +31,7 @@ def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            user = form.save() 
             user = authenticate(
                 username=request.POST['username'], password = request.POST['password1']  
             )

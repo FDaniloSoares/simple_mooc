@@ -1,0 +1,8 @@
+{
+    // Controls the font family.
+"editor.fontFamily": "JetBrainsMono Regular",
+
+// Controls the font size.
+"editor.fontSize": 14, 
+"editor.fontLigatures": true,
+}
