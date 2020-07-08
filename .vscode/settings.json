@@ -3,6 +3,6 @@
 "editor.fontFamily": "JetBrainsMono Regular",
 
 // Controls the font size.
-"editor.fontSize": 14, 
+"editor.fontSize": 15, 
 "editor.fontLigatures": true,
 }
