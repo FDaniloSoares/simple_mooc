@@ -18,7 +18,7 @@ class MaterialInlineAdmin(admin.TabularInline):
 
 class LessonAdmin(admin.ModelAdmin):
     
-    list_display = ['name', 'number', 'course', 'release_date']
+    list_display = ['name', 'number', 'course']
     search_fields = ['name', 'description']
     list_filter = ['created_at']
 
