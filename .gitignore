@@ -1,4 +1,4 @@
 *.pyc
 local_settings.py
 db.sqlite3
-*.vccode
+.vscode/settings.json
