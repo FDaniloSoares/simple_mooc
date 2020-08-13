@@ -16,15 +16,12 @@ def contact(request):
 @csrf_exempt
 def webhook(request):
     #verify if request came from github
-    forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    print(forwarded_for)
+    forwarded_for = u'{}'.format(request.META.get('HTTP_X_FORWARDED_FOR'))
     if forwarded_for:
-        ip = forwarded_for.split(',')[-1].strip()
+        pass
     else:
-        ip = request.META.get('REMOTE_ADDR')
-    ip_formated = u'{}'.format(ip)
-    print(ip_formated)
-    client_ip_address = ip_address(ip_formated)
+        forwarded_for = u'{}'.format(request.META.get('REMOTE_ADDR'))
+    client_ip_address = ip_address(forwarded_for)
     whitelist = requests.get('https://api.github.com/meta').json()['hooks']
 
     for valid_ip in whitelist:
