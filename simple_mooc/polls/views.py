@@ -21,7 +21,8 @@ def webhook(request):
         ip = forwarded_for.split(',')[-1].strip()
     else:
         ip = request.META.get('REMOTE_ADDR')
-    client_ip_address = ip_address(ip)
+    ip_formated = u'{}'.format(ip)
+    client_ip_address = ip_address(ip_formated)
     whitelist = requests.get('https://api.github.com/meta').json()['hooks']
 
     for valid_ip in whitelist:
