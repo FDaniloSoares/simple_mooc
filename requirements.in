@@ -17,3 +17,5 @@ sqlparse
 static3
 Werkzeug
 model-mommy
+requests
+ipaddress
