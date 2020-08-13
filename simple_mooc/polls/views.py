@@ -17,12 +17,14 @@ def contact(request):
 def webhook(request):
     #verify if request came from github
     forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    print(forwarded_for)
     if forwarded_for:
         ip = forwarded_for.split(',')[-1].strip()
     else:
         ip = request.META.get('REMOTE_ADDR')
     ip_formated = u'{}'.format(ip)
-    client_ip_address = ip_address(ip_formated)
+    print(ip_formated)
+    client_ip_address = ip_network(ip_formated)
     whitelist = requests.get('https://api.github.com/meta').json()['hooks']
 
     for valid_ip in whitelist:
