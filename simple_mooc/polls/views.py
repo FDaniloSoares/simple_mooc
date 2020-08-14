@@ -4,6 +4,7 @@ from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseForbidden, HttpResponseServerError
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 from django.utils.encoding import force_bytes
 
 import requests
@@ -17,9 +18,12 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
+@require_POST
 @csrf_exempt
 def webhook(request):
     #verify if request came from github
+
+
     # Verify the request signature
     header_signature = request.META.get('HTTP_X_HUB_SIGNATURE')
     if header_signature is None:
@@ -34,5 +38,15 @@ def webhook(request):
         return HttpResponseForbidden('Permission denied.')
 
     # If request reached this point we are in a good shape
-    return HttpResponse('pong')
+    # Process the GitHub events
+    event = request.META.get('HTTP_X_GITHUB_EVENT', 'ping')
+
+    if event == 'ping':
+        return HttpResponse('pong')
+    elif event == 'push':
+        # Deploy some code for example
+        return HttpResponse('success')
+
+    # In case we receive an event that's not ping or push
+    return HttpResponse(status=204)
 
