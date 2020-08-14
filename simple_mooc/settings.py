@@ -11,6 +11,16 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import environ
+
+env = environ.Env(
+    DEBUG=(bool, False),
+    TEMPLATE_DEBUG=(bool, False),
+)
+# reading .env file
+environ.Env.read_env()
+
+GITHUB_WEBHOOK_KEY = env('GITHUB_WEBHOOK_KEY')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,12 +30,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2s1y4o08+9smlv4#ld&%znr^t4inm&(i78_qwq8j72dkjyniuf'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env('DEBUG')
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = env('TEMPLATE_DEBUG')
 
 
 # Application definition
