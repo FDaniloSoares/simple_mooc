@@ -19,3 +19,4 @@ Werkzeug
 model-mommy
 requests
 ipaddress
+django-environ

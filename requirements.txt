@@ -10,6 +10,7 @@ chardet==3.0.4            # via requests
 click==7.1.2              # via -r requirements.in, flask
 dj-database-url==0.5.0    # via -r requirements.in
 dj-static==0.0.6          # via -r requirements.in
+django-environ==0.4.5     # via -r requirements.in
 django==3.0.7             # via -r requirements.in, model-mommy
 flask==1.1.2              # via -r requirements.in
 gunicorn==20.0.4          # via -r requirements.in
