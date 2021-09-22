@@ -2,7 +2,7 @@ asgiref
 click
 dj-database-url
 dj-static
-django==3.0.7
+django==3.1.13
 Flask
 gunicorn
 itsdangerous
